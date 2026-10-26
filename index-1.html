@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080b14">
+<meta name="description" content="Kayler AI - cool Roblox username ideas for gamers.">
+<title>Kayler AI | Roblox Username Generator</title>
+<style>
+:root{--bg:#080b14;--line:#2b3956;--blue:#8297ff;--cyan:#62e4f5;--text:#f5f7ff;--muted:#a6b2ca}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at top,#17264a 0%,transparent 48%),var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
+header{padding:20px 15px;text-align:center;border-bottom:1px solid #ffffff15}
+.logo{font-size:29px;font-weight:900;letter-spacing:-1px}
+.logo span,h1 span{color:var(--blue)}
+.tag{font-size:11px;letter-spacing:3px;color:var(--cyan);margin-top:8px}
+main{max-width:680px;margin:auto;padding:36px 16px}
+.hero{text-align:center;margin-bottom:28px;animation:rise .6s ease}
+h1{font-size:clamp(34px,8vw,53px);letter-spacing:-2px;margin:13px 0}
+p{color:var(--muted);line-height:1.65}
+.hero p{max-width:460px;margin:12px auto}
+.panel{padding:clamp(18px,5vw,28px);background:linear-gradient(145deg,#141e32,#0d1321);border:1px solid var(--line);border-radius:20px;box-shadow:0 20px 60px #0004}
+h2{font-size:21px;margin:0 0 8px}
+label{display:block;font-size:14px;font-weight:bold;margin:20px 0 9px}
+input,select{width:100%;min-height:49px;padding:13px;background:#090f1d;border:1px solid #344563;border-radius:10px;color:white;font-size:16px;outline:none}
+input:focus,select:focus{border-color:var(--blue);box-shadow:0 0 0 3px #8297ff22}
+button{font:inherit;font-weight:bold;cursor:pointer}
+.generate{width:100%;min-height:52px;margin-top:22px;border:0;border-radius:11px;background:linear-gradient(100deg,var(--blue),var(--cyan));color:#080b14;transition:transform .2s,filter .2s}
+.generate:active{transform:scale(.98)}
+.results-head{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:27px 0 12px}
+.results-head h2{font-size:17px}
+.count{font-size:12px;color:var(--muted)}
+#results{display:grid;gap:10px}
+.result{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px;background:#090f1d;border:1px solid #293754;border-radius:11px;animation:rise .35s ease both}
+.name{font-weight:bold;overflow-wrap:anywhere}
+.copy{flex-shrink:0;padding:10px 12px;border:1px solid #3b4e70;border-radius:9px;background:#223250;color:white}
+.copy.done{color:#75f5ba;border-color:#75f5ba66}
+.note{font-size:12px;margin-top:19px}
+.creator-footer{text-align:center;padding:30px 16px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+.creator-logo{font-size:25px;font-weight:900;color:var(--blue)}
+.roblox-profile{max-width:420px;margin:24px auto;padding:24px 16px;border:1px solid #344563;border-radius:18px;background:linear-gradient(145deg,#141d30,#090f1d)}
+.profile-label{font-size:11px;letter-spacing:2px;color:var(--cyan)}
+.roblox-profile h3{color:white;font-size:22px;margin:13px 0}
+.roblox-username{font-weight:bold;color:var(--blue)}
+.roblox-follow{display:inline-block;margin-top:8px;padding:14px 20px;border-radius:10px;background:linear-gradient(100deg,var(--blue),var(--cyan));color:#080b14;font-weight:900;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.roblox-follow:hover{transform:translateY(-2px);box-shadow:0 0 22px #8297ff55}
+.copyright{font-size:11px;margin-top:25px}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">✦ Kayler <span>AI</span></div>
+  <div class="tag">ROBLOX GAMER TOOLS</div>
+</header>
+<main>
+  <section class="hero">
+    <div class="tag">YOUR GAMING IDENTITY STARTS HERE</div>
+    <h1>Find Your <span>Username.</span></h1>
+    <p>Create cool gaming names, pick your style, and copy your favorite. Your next Roblox identity starts here.</p>
+  </section>
+  <section class="panel">
+    <h2>✦ Username Generator</h2>
+    <p>Choose your vibe and create username ideas in seconds.</p>
+    <label for="word">Your name or favorite word</label>
+    <input id="word" maxlength="16" placeholder="Example: Kayler" autocomplete="off">
+    <label for="style">Choose your style</label>
+    <select id="style">
+      <option value="pro">⚡ Pro Gamer</option>
+      <option value="cool">💎 Cool &amp; Unique</option>
+      <option value="dark">🌑 Dark Legend</option>
+      <option value="short">🚀 Short &amp; Simple</option>
+      <option value="cute">🌟 Cute &amp; Fun</option>
+      <option value="mythic">👑 Mythic &amp; Royal</option>
+    </select>
+    <button class="generate" id="generate">✦ Generate Usernames</button>
+    <div class="results-head"><h2>Your username ideas</h2><span class="count" id="count">8 ideas</span></div>
+    <div id="results" aria-live="polite"></div>
+    <p class="note">These are username ideas, not availability results. Check Roblox to see whether a name can be used. Kayler AI is an independent fan-made tool, not affiliated with Roblox.</p>
+  </section>
+</main>
+<footer class="creator-footer">
+  <div class="creator-logo">✦ Kayler AI</div>
+  <p>Made for gamers. Built with creativity.</p>
+  <div class="roblox-profile">
+    <span class="profile-label">MEET THE CREATOR</span>
+    <h3>Follow me on Roblox!</h3>
+    <p class="roblox-username">@2super_block2</p>
+    <a class="roblox-follow" href="https://www.roblox.com/share?code=29c642cf1e37794dba736253a2502e2d&amp;type=Profile&amp;source=ProfileShare&amp;stamp=1793025810104" target="_blank" rel="noopener noreferrer">Follow me on Roblox ↗</a>
+  </div>
+  <p class="copyright">© Kayler AI · Independent fan-made website</p>
+</footer>
+<script>
+const styles={
+pro:["Plays","Clutch","Ace","Rush","OP","GG","MVP","Pro"],
+cool:["Nova","Vortex","Blaze","Frost","Neon","Orbit","Pixel","Zen"],
+dark:["Shadow","Phantom","Void","Raven","Ghost","Night","Storm","Zero"],
+short:["KX","Zy","Rex","Kai","Neo","Ry","Lux","Vex"],
+cute:["Bunny","Mochi","Panda","Cookie","Peach","Boba","Berry","Puff"],
+mythic:["Royal","Legend","Titan","Cosmic","Dragon","Noble","Myth","Crown"]
+};
+const results=document.getElementById("results");
+function generate(){
+  const base=document.getElementById("word").value.trim().replace(/[^a-zA-Z0-9]/g,"").slice(0,12)||"Player";
+  const words=styles[document.getElementById("style").value];
+  const names=new Set(); let attempts=0;
+  while(names.size<8 && attempts<300){
+    attempts++;
+    const w=words[Math.floor(Math.random()*words.length)];
+    const method=Math.floor(Math.random()*4);
+    const number=Math.floor(Math.random()*99)+1;
+    let name=method===0?base+w:method===1?w+base:method===2?base+w+number:w+number+base;
+    name=name.slice(0,20);
+    if(name.length>=3)names.add(name);
+  }
+  results.replaceChildren();
+  document.getElementById("count").textContent=names.size+" ideas";
+  names.forEach(name=>{
+    const row=document.createElement("div"); row.className="result";
+    const text=document.createElement("span"); text.className="name"; text.textContent=name;
+    const button=document.createElement("button"); button.className="copy"; button.textContent="Copy";
+    button.addEventListener("click",async()=>{
+      try{
+        if(navigator.clipboard&&window.isSecureContext) await navigator.clipboard.writeText(name);
+        else{
+          const field=document.createElement("textarea"); field.value=name;
+          field.style.position="fixed"; field.style.opacity="0";
+          document.body.appendChild(field); field.select();
+          const ok=document.execCommand("copy"); field.remove();
+          if(!ok)throw new Error("Copy failed");
+        }
+        button.textContent="✓ Copied"; button.classList.add("done");
+      }catch(error){window.prompt("Copy this username:",name);}
+      setTimeout(()=>{button.textContent="Copy";button.classList.remove("done");},1500);
+    });
+    row.append(text,button); results.appendChild(row);
+  });
+}
+document.getElementById("generate").addEventListener("click",generate);
+generate();
+</script>
+</body>
+</html>
